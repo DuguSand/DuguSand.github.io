@@ -1,0 +1,23 @@
+/* 2. 设置所有卡片、文章页、主要布局块的透明度 */
+.layout_post > #post,
+.layout_page > div:first-child:not(.recent-posts),
+.layout_post > #page,
+.read-mode .layout_post > #post,
+#aside_content .card-widget,
+#recent-posts > .recent-post-item {
+  background: rgba(255, 255, 255, 0.8) !important; /* 调整0.7这个值可以控制透明度 */
+}
+
+/* 3. (可选) 设置侧边栏卡片的透明度，覆盖主题默认的卡片背景变量 */
+:root {
+  --card-bg: rgba(255, 255, 255, 0.8);
+}
+
+/* 4. (可选) 深色模式下的透明度设置 */
+[data-theme="dark"] {
+  --card-bg: rgba(0, 0, 0, 0.8);
+}
+[data-theme="dark"] .layout_post > #post,
+[data-theme="dark"] #recent-posts > .recent-post-item {
+  background: rgba(0, 0, 0, 0.8) !important;
+}
